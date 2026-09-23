@@ -1,0 +1,54 @@
+# Never commit any UK Biobank participant data — these are forbidden by
+# the UK Biobank application terms.
+*.csv
+*.tsv
+!data/atlas/*.txt              # atlas reference files are public
+
+# Per-subject matrices and time series (derived from UKB rsfMRI / dMRI)
+conn_*.txt
+sc_*.txt
+subject*.txt
+*.csv.gz
+
+# Pipeline inputs and outputs (subject-level derivatives, figures, tables)
+derivatives/
+output/
+nbs/
+*.npy
+*.npz
+*.mat
+nbs_result_*
+slurm_*.out
+slurm_*.err
+*.docx
+*.tif
+*.tiff
+*.nii
+*.nii.gz
+nilearn_data/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# R
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# MATLAB
+*.asv
+*.fig
+slprj/
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*~

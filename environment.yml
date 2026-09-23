@@ -1,0 +1,30 @@
+# Conda environment for the Python portions of the "Arrhythmic Brain" pipeline.
+#
+# Create with:
+#   conda env create -f environment.yml
+#   conda activate arrhythmic-brain
+#
+# Tested with Python 3.10 and 3.11.
+
+name: arrhythmic-brain
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.10
+
+  # Core scientific stack
+  - numpy>=1.24
+  - pandas>=2.0
+  - scipy>=1.10
+
+  # Neuroimaging-specific (signal filtering; atlas fetching in 04e)
+  - nilearn>=0.10
+
+  # Statistics
+  - statsmodels>=0.14
+
+  # Plotting
+  - matplotlib>=3.7
+  - seaborn>=0.13
